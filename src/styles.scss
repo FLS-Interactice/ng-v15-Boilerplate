@@ -1,1 +1,20 @@
 /* You can add global styles to this file, and also import other style files */
+
+
+/* You can add global styles to this file, and also import other style files */
+/* Bootstrap Overrides */
+@import 'bootstrapOverrides';
+
+/* Importing Bootstrap SCSS file from node modules. */
+// @import 'bootstrap';
+
+/* Bootstrap include */ 
+@import 'bootStrapIncludes';
+
+/* mixins */
+@import 'mixins/mixins';
+
+/* helper classes */
+@import 'helperClasses';
+
+

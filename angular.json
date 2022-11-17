@@ -29,10 +29,18 @@
               "src/favicon.ico",
               "src/assets"
             ],
-            "styles": [
+            "styles": [                           
               "src/styles.scss"
             ],
-            "scripts": []
+            "stylePreprocessorOptions": {
+              "includePaths": [
+                "./node_modules/bootstrap/scss", 
+                "src/scss"
+              ]
+            },            
+            "scripts": [
+              "./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
+            ]
           },
           "configurations": {
             "production": {
