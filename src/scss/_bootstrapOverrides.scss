@@ -2,38 +2,27 @@
 /// Boostrap Overrides
 /// 
 /// @author Mark Handy
-/// 
 /// @name Boostrap Variable Overrides
-/// 
 /// @group variables
 
 
-/// Black
-/// @type Colour
+
 $black: #000;
-/// @type Colour
+
 $white: #fff;
-/// @type Colour
-$blue:  #1057A2;
-/// @type Colour
+$blue: #1057A2;
 $red: red;
-/// @type Colour
 $silver: #cdcdcd;
-/// @type Colour
 $grey :#767676;
-/// @type Colour
 $platinum: #E5E4E2;
 /// Default colour for borders
-/// @type Colour
 $borderColour: lighten($grey, 10);
 
 /// Grid breakpoints Updates
-///
 /// @type Breakpoint
 $grid-breakpoints: (xs: 0, sm: 576px, md: 768px, lg: 992px, xl: 1200px, xxl: 1440px, xxxl: 1600px);
 
 /// Container max widths
-///
 /// @type Container
 $container-max-widths: (sm: 540px, md: 720px, lg: 960px, xl: 1400px, xxl: 1440px);
 
@@ -58,19 +47,17 @@ $spacers: map-merge((0: 0,
 
 $sizes: ();
 // stylelint-disable-next-line scss/dollar-variable-default
-$sizes: map-merge((
-    25: 25%, 
-    33: 33%, 
-    50: 50%, 
-    75: 75%, 
-    100: 100%, 
-    auto: auto), 
-$sizes);
+$sizes: map-merge((25: 25%,
+        33: 33%,
+        50: 50%,
+        75: 75%,
+        100: 100%,
+        auto: auto),
+    $sizes);
 // Typography
 
-$font-size-base: 1rem;
-$font-family-sans-serif: 'Roboto','Helvetica Neue',Arial,sans-serif;
+// $font-size-base: 1rem;
+$font-family-sans-serif: 'Roboto', 'Helvetica Neue', Arial, sans-serif;
 $line-height-base: 1.5;
-
 
 /* custom variable values:END */

@@ -12,6 +12,8 @@ import { SiteLogoComponent } from './components/header/site-logo/site-logo.compo
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { PageNotFoundComponent } from './components/pages/page-not-found/page-not-found.component';
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
+import { OneColumnTemplateComponent } from './components/pages/one-column-template/one-column-template.component';
+import { TwoColumnTemplateSideRailComponent } from './components/pages/two-column-template-side-rail/two-column-template-side-rail.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { AboutUsComponent } from './components/pages/about-us/about-us.component
     SiteLogoComponent,
     HomePageComponent,
     PageNotFoundComponent,
-    AboutUsComponent
+    AboutUsComponent,
+    OneColumnTemplateComponent,
+    TwoColumnTemplateSideRailComponent
   ],
   imports: [
     BrowserModule,
