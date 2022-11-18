@@ -29,7 +29,7 @@ export class AppComponent implements OnInit{
         const ogDesc = data.ogDescription;
         const ogImage = data.ogImage;
         // set title and description
-        this.titleService.setTitle(data.title);        
+        this.titleService.setTitle(data.title + " | Mark's Angular Prototype");        
         this.metaService.updateTag({ name: 'description', content: desc });
         // optional open graph tags
         if (ogTitle){
