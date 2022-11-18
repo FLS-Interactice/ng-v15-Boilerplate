@@ -18,7 +18,7 @@ const routes: Routes = [
       description: 'This is the home page',
       ogTitle: 'This is the og Title',
       ogDescription: 'This is the og description',
-      ogImage: 'og Image placeholder    s'
+      ogImage: 'og Image placeholder'
       
     }
   },

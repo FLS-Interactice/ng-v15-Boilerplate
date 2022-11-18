@@ -43,7 +43,7 @@ export class AppComponent implements OnInit{
           this.metaService.removeTag('property="og:description"');
         } 
         if (ogImage){
-          this.metaService.updateTag({ property: 'og:image', content: ogImage });
+          this.metaService.updateTag({ property: 'og:image', content: 'https://www.imagehost.url/' + ogImage });
         } else {
           this.metaService.removeTag('property="og:image"');
         } 
