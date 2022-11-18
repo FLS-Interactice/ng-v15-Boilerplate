@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { AboutUsComponent } from './components/pages/about-us/about-us.component';
 import { HomePageComponent } from './components/pages/home-page/home-page.component';
 import { OneColumnTemplateComponent } from './components/pages/one-column-template/one-column-template.component';
@@ -9,10 +10,31 @@ import { TwoColumnTemplateSideRailComponent } from './components/pages/two-colum
 
 
 const routes: Routes = [
-  { path: '', component: HomePageComponent},
-  { path: 'about-us', component: AboutUsComponent},
-  { path: 'one-column', component: OneColumnTemplateComponent},
-  { path: 'two-column', component: TwoColumnTemplateSideRailComponent},
+  { 
+    path: '', 
+    component: HomePageComponent,
+    data: {
+      title: 'Home',
+      description: 'This is the home page'
+    }
+  },
+  { 
+    path: 'about-us', 
+    component: AboutUsComponent,
+    data: {
+      title: 'About Us',
+      description: 'This is the About Us page'
+    }
+  },
+  { 
+    path: 'one-column', 
+    component: OneColumnTemplateComponent,
+    title: 'One Column Page Template'
+  },
+  { 
+    path: 'two-column', 
+    component: TwoColumnTemplateSideRailComponent
+  },
 
 
   // Wild card route for 404 page
