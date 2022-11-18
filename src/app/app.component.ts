@@ -25,9 +25,14 @@ export class AppComponent implements OnInit{
         let route = this.getChild(this.activatedRoute)
         let data = route.snapshot.data;
         let desc = data.description;
+        let ogImaqge = data.ogImate;
         this.titleService.setTitle(data.title);        
         this.metaService.updateTag({ name: 'description', content: desc });
         this.metaService.updateTag({ name: 'og:title', content: data.title });
+        this.metaService.updateTag({ name: 'og:description', content: desc });
+        if (ogImaqge){
+          this.metaService.updateTag({ name: 'og:image', content: ogImaqge });
+        }
       })
   }
   getChild(activatedRoute: ActivatedRoute): any {
