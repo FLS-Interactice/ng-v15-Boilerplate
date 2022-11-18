@@ -1,0 +1,20 @@
+// skip to main items
+.skipToMain {
+  position: absolute;
+  top: 0;
+  left: 50%;  
+  transform: translateY(-100%);
+  padding: 25px 50px;
+  background-color: $white;
+  z-index: 1;
+
+  &:focus {    
+    transform: translateY(10%);
+  }
+}
+
+// global focus
+*:focus{
+  outline-style: dashed;
+  outline-width: 2px; 
+}
