@@ -15,7 +15,11 @@ const routes: Routes = [
     component: HomePageComponent,
     data: {
       title: 'Home',
-      description: 'This is the home page'
+      description: 'This is the home page',
+      ogTitle: 'This is the og Title',
+      ogDescription: 'This is the og description',
+      ogImage: 'og Image placeholder    s'
+      
     }
   },
   { 

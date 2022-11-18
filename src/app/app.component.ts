@@ -25,14 +25,28 @@ export class AppComponent implements OnInit{
         let route = this.getChild(this.activatedRoute)
         let data = route.snapshot.data;
         let desc = data.description;
-        let ogImaqge = data.ogImate;
+        let ogTitle = data.ogTitle;
+        let ogDesc = data.ogDescription;
+        let ogImage = data.ogImage;
         this.titleService.setTitle(data.title);        
         this.metaService.updateTag({ name: 'description', content: desc });
-        this.metaService.updateTag({ name: 'og:title', content: data.title });
-        this.metaService.updateTag({ name: 'og:description', content: desc });
-        if (ogImaqge){
-          this.metaService.updateTag({ name: 'og:image', content: ogImaqge });
-        }
+        // optional open graph tags
+        if (ogTitle){
+          this.metaService.updateTag({ name: 'og:title', content: ogTitle });
+        } else {
+          this.metaService.removeTag('name="og:title"');
+        }         
+        if (ogDesc){
+          this.metaService.updateTag({ name: 'og:description', content: ogDesc });
+        } else {
+          this.metaService.removeTag('name="og:description"');
+        } 
+        if (ogImage){
+          this.metaService.updateTag({ name: 'og:image', content: ogImage });
+        } else {
+          this.metaService.removeTag('name="og:image"');
+        } 
+
       })
   }
   getChild(activatedRoute: ActivatedRoute): any {
