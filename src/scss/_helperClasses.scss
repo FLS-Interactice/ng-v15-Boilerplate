@@ -3,3 +3,13 @@
 ///
 /// @author Mark Handy
 /// @group helpers
+/// 
+///
+
+
+// disable focus out line. NOT TO BE USED ON BUTTONS, LINKS, FORM ELEMENTS
+.noFocusOutline{
+  &:focus{
+    outline: none;
+  }
+}
