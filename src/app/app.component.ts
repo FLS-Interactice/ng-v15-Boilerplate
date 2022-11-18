@@ -22,29 +22,30 @@ export class AppComponent implements OnInit{
       filter((event: any) => event instanceof NavigationEnd),
     )
       .subscribe(() => {
-        let route = this.getChild(this.activatedRoute)
-        let data = route.snapshot.data;
-        let desc = data.description;
-        let ogTitle = data.ogTitle;
-        let ogDesc = data.ogDescription;
-        let ogImage = data.ogImage;
+        const route = this.getChild(this.activatedRoute)
+        const data = route.snapshot.data;
+        const desc = data.description;
+        const ogTitle = data.ogTitle;
+        const ogDesc = data.ogDescription;
+        const ogImage = data.ogImage;
+        // set title and description
         this.titleService.setTitle(data.title);        
         this.metaService.updateTag({ name: 'description', content: desc });
         // optional open graph tags
         if (ogTitle){
-          this.metaService.updateTag({ name: 'og:title', content: ogTitle });
+          this.metaService.updateTag({ property: 'og:title', content: ogTitle });
         } else {
-          this.metaService.removeTag('name="og:title"');
+          this.metaService.removeTag('property="og:title"');
         }         
         if (ogDesc){
-          this.metaService.updateTag({ name: 'og:description', content: ogDesc });
+          this.metaService.updateTag({ property: 'og:description', content: ogDesc });
         } else {
-          this.metaService.removeTag('name="og:description"');
+          this.metaService.removeTag('property="og:description"');
         } 
         if (ogImage){
-          this.metaService.updateTag({ name: 'og:image', content: ogImage });
+          this.metaService.updateTag({ property: 'og:image', content: ogImage });
         } else {
-          this.metaService.removeTag('name="og:image"');
+          this.metaService.removeTag('property="og:image"');
         } 
 
       })
